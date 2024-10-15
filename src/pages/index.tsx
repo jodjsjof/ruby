@@ -17,8 +17,6 @@ const Home: NextPage = () => {
   const Search = async () => {
     if (input.current?.value === "") return;
     let url = input.current?.value;
-    if (!isUrl(url)) url = `https://search.brave.com/search?q=${url}`;
-    else if (!(url?.startsWith("https://") || url?.startsWith("http://")))
       url = `http://${url}`;
     url = xor.encode(url);
     await router
@@ -34,7 +32,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Emerald | Home</title>
+        <title>You really thought I would just give you one?</title>
         <meta name="description" content="A Delusions production" />
         <link rel="shortcut icon" href="/emerald.png" type="image/png" />
       </Head>
